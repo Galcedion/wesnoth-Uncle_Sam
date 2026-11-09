@@ -6,18 +6,21 @@ local on_event = wesnoth.require("lua/on_event.lua")
 local us_startingcash = wesnoth.get_variable("us_startingcash")
 local us_cashrate = wesnoth.get_variable("us_cashrate")
 local us_rates = wesnoth.get_variable("us_rates")
+local us_messages = wesnoth.get_variable("us_messages")
 local schedule_length = 1
 
 function us_grant_cash()
 	wesnoth.fire("gold",{
 		amount = us_cashrate
 	})
-	wesnoth.message("", _ "Uncle Sam granted everyone $us_cashrate| gold") -- passing var seemingly doesnt work here
-	wesnoth.fire("message",{
-		message = _ "Uncle Sam granted everyone $us_cashrate| gold",
-		speaker = "narrator"
-	})
-	-- TODO either of those messages should suffice, but the latter is only displayed once, which is an issue for multiple sides controlled by the same player
+	if us_messages == 1 then
+		wesnoth.message(_ "Uncle Sam", _ "granted everyone some gold")
+	elseif us_messages == 2 then
+		wesnoth.fire("message",{
+			message = _ "Uncle Sam granted everyone $us_cashrate| gold",
+			speaker = "narrator"
+		})
+	end
 end
 
 on_event("prestart", function()
@@ -53,6 +56,14 @@ on_event("prestart", function()
 	wesnoth.fire("gold",{
 		amount = us_startingcash
 	})
+	if us_messages == 1 then
+		wesnoth.message(_ "Uncle Sam", _ "gave everyone some starting gold")
+	elseif us_messages == 2 then
+		wesnoth.fire("message",{
+			message = _ "Uncle Sam gave everyone $us_cashrate| starting gold",
+			speaker = "narrator"
+		})
+	end
 end)
 
 on_event("turn end", function()
