@@ -19,4 +19,4 @@ The following options can be set ahead of the game:
 
 ## Testing
 
-Developing and testing on The Battle for Wesnoth 1.16
+Developing and testing done on The Battle for Wesnoth 1.16

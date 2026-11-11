@@ -14,10 +14,10 @@ function us_grant_cash()
 		amount = us_cashrate
 	})
 	if us_messages == 1 then
-		wesnoth.message(_ "Uncle Sam", _ "granted everyone some gold")
+		wesnoth.message(_ "Uncle Sam", _ "granted everyone some cash")
 	elseif us_messages == 2 then
 		wesnoth.fire("message",{
-			message = _ "Uncle Sam granted everyone $us_cashrate| gold",
+			message = _ "Uncle Sam granted everyone $us_cashrate| cash.",
 			speaker = "narrator"
 		})
 	end
@@ -57,10 +57,10 @@ on_event("prestart", function()
 		amount = us_startingcash
 	})
 	if us_messages == 1 then
-		wesnoth.message(_ "Uncle Sam", _ "gave everyone some starting gold")
+		wesnoth.message(_ "Uncle Sam", _ "gave everyone some starting money")
 	elseif us_messages == 2 then
 		wesnoth.fire("message",{
-			message = _ "Uncle Sam gave everyone $us_cashrate| starting gold",
+			message = _ "Uncle Sam gave everyone $us_cashrate| starting money.",
 			speaker = "narrator"
 		})
 	end

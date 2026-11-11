@@ -1,0 +1,75 @@
+msgid ""
+msgstr ""
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# BLOCK _main.cfg
+msgid "Uncle Sam"
+msgstr ""
+
+msgid "All players receive the same income at regular intervals. All other income is removed."
+msgstr ""
+
+msgid "Inspired by the Earth 2150 gamemode of the same name."
+msgstr ""
+
+# BLOCK wml/options.cfg
+msgid "Starting Money"
+msgstr ""
+
+msgid "Starting gold for each player"
+msgstr ""
+
+msgid "Cash Rate"
+msgstr ""
+
+msgid "Gold rate per cycle"
+msgstr ""
+
+msgid "Rate Frequency"
+msgstr ""
+
+msgid "When are the rates to be payed"
+msgstr ""
+
+msgid "Twice per day"
+msgstr ""
+
+msgid "Daily"
+msgstr ""
+
+msgid "Every two days"
+msgstr ""
+
+msgid "Every three days"
+msgstr ""
+
+msgid "Ingame Messages"
+msgstr ""
+
+msgid "What type of messages are to be displayed"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "Log"
+msgstr ""
+
+msgid "Dialog"
+msgstr ""
+
+# BLOCK lua/uncle_sam.lua
+msgid "gave everyone some starting money"
+msgstr ""
+
+msgid "Uncle Sam gave everyone $us_cashrate| starting money."
+msgstr ""
+
+msgid "granted everyone some cash"
+msgstr ""
+
+msgid "Uncle Sam granted everyone $us_cashrate| cash."
+msgstr ""
