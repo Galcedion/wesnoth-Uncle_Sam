@@ -8,6 +8,7 @@ local us_cashrate = wesnoth.get_variable("us_cashrate")
 local us_rates = wesnoth.get_variable("us_rates")
 local us_messages = wesnoth.get_variable("us_messages")
 local schedule_length = 1
+local stored_message = ""
 
 function us_grant_cash()
 	wesnoth.fire("gold",{
@@ -16,10 +17,7 @@ function us_grant_cash()
 	if us_messages == 1 then
 		wesnoth.message(_ "Uncle Sam", _ "granted everyone some cash")
 	elseif us_messages == 2 then
-		wesnoth.fire("message",{
-			message = _ "Uncle Sam granted everyone $us_cashrate| cash.",
-			speaker = "narrator"
-		})
+		stored_message = _ "Uncle Sam granted everyone $us_cashrate| cash."
 	end
 end
 
@@ -59,10 +57,7 @@ on_event("prestart", function()
 	if us_messages == 1 then
 		wesnoth.message(_ "Uncle Sam", _ "gave everyone some starting money")
 	elseif us_messages == 2 then
-		wesnoth.fire("message",{
-			message = _ "Uncle Sam gave everyone $us_cashrate| starting money.",
-			speaker = "narrator"
-		})
+		stored_message = _ "Uncle Sam gave everyone $us_cashrate| starting money."
 	end
 end)
 
@@ -75,6 +70,16 @@ on_event("turn end", function()
 		end
 	elseif wesnoth.current.turn % (schedule_length * us_rates) == 0 then
 		us_grant_cash()
+	end
+end)
+
+on_event("new turn", function()
+	if stored_message ~= "" then
+		wesnoth.fire("message",{
+			message = stored_message,
+			speaker = "narrator"
+		})
+		stored_message = ""
 	end
 end)
 -->>
