@@ -68,21 +68,12 @@ on_event("prestart", function()
 	end
 	-- set initial gold and save recruit lists
 	for s=1, #wesnoth.sides do
-		wesnoth.fire("store_gold",{
-			side = s
-		})
-		wesnoth.fire("gold",{
-			side = s,
-			amount = -wml.variables.gold
-		})
-		-- wesnoth.sides[s].gold = 0 | alternative to fire negative gold
+		wesnoth.sides[s].gold = us_startingcash
 		wesnoth.sides[s].base_income = 0
 		wesnoth.sides[s].village_gold = 0
+		wesnoth.sides[s].village_support = 0
 		stored_recruit[s] = wesnoth.sides[s].recruit
 	end
-	wesnoth.fire("gold",{
-		amount = us_startingcash
-	})
 	if us_messages == 1 then
 		wesnoth.message(_ "Uncle Sam", _ "gave everyone some starting money")
 	elseif us_messages == 2 then
