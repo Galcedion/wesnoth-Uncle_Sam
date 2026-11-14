@@ -46,6 +46,15 @@ msgstr "Alle zwei Tage"
 msgid "Every three days"
 msgstr "Alle drei Tage"
 
+msgid "Units Limit"
+msgstr "Einheitenlimit"
+
+msgid "How much golds worth of units each side can have"
+msgstr "Wie viel Geldwert an Einheiten jede Seite haben kann"
+
+msgid "Unlimited"
+msgstr "Kein Limit"
+
 msgid "Ingame Messages"
 msgstr "Spielbenachrichtigungen"
 

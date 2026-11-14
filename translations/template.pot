@@ -46,6 +46,15 @@ msgstr ""
 msgid "Every three days"
 msgstr ""
 
+msgid "Units Limit"
+msgstr ""
+
+msgid "How much golds worth of units each side can have"
+msgstr ""
+
+msgid "Unlimited"
+msgstr ""
+
 msgid "Ingame Messages"
 msgstr ""
 
