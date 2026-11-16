@@ -40,12 +40,30 @@ function calculate_budget()
 			side = cur_side
 		})
 		emptied_recruit[cur_side] = 1
+		if us_messages == 1 then
+			wesnoth.message(_ "Uncle Sam", wesnoth.sides[cur_side].side_name .. _ " reached the unit limit!")
+		elseif us_messages == 2 then
+			wesnoth.fire("message",{
+				message = _ "You have reached your unit limit!",
+				speaker = "narrator",
+				side_for = cur_side
+			})
+		end
 	elseif budget >= 0 and emptied_recruit[cur_side] ~= nil then
 		wesnoth.fire("set_recruit",{
 			recruit = stored_recruit[cur_side],
 			side = cur_side
 		})
 		emptied_recruit[cur_side] = nil
+		if us_messages == 1 then
+			wesnoth.message(_ "Uncle Sam",  wesnoth.sides[cur_side].side_name .. _ " can recruit again!")
+		elseif us_messages == 2 then
+			wesnoth.fire("message",{
+				message = _ "You can recruit units again!",
+				speaker = "narrator",
+				side_for = cur_side
+			})
+		end
 	end
 end
 

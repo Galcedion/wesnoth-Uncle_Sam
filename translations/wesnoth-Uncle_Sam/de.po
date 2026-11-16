@@ -85,3 +85,15 @@ msgstr "gewährt allen etwas Cash"
 
 msgid "Uncle Sam granted everyone $us_cashrate| cash."
 msgstr "Uncle Sam gewährt allen $us_cashrate| Cash."
+
+msgid " reached the unit limit!"
+msgstr " hat das Einheitenlimit erreicht!"
+
+msgid "You have reached your unit limit!"
+msgstr "Ihr habt Euer Einheitenlimit erreicht!"
+
+msgid " can recruit again!"
+msgstr " kann wieder rekrutieren!"
+
+msgid "You can recruit units again!"
+msgstr "Ihr könnt wieder Einheiten rekrutieren!"

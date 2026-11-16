@@ -82,3 +82,15 @@ msgstr ""
 
 msgid "Uncle Sam granted everyone $us_cashrate| cash."
 msgstr ""
+
+msgid " reached the unit limit!"
+msgstr ""
+
+msgid "You have reached your unit limit!"
+msgstr ""
+
+msgid " can recruit again!"
+msgstr ""
+
+msgid "You can recruit units again!"
+msgstr ""
