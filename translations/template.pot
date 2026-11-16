@@ -9,10 +9,10 @@ msgstr ""
 msgid "Uncle Sam"
 msgstr ""
 
-msgid "All players receive the same income at regular intervals. All other income is removed."
-msgstr ""
-
-msgid "Inspired by the Earth 2150 gamemode of the same name."
+msgid ""
+"All players receive the same income at regular intervals. All other income is removed.\n"
+"\n"
+"Inspired by the 'Earth 2150' gamemode of the same name."
 msgstr ""
 
 # BLOCK wml/options.cfg
