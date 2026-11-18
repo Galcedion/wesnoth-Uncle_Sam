@@ -15,8 +15,11 @@ The following options can be set ahead of the game:
 - Starting Cash
 - Cash Rate
 - Rate Cycle
+- Units Limit
 - Ingame Messages
 
 ## Testing
 
 Developing and testing done on The Battle for Wesnoth 1.16
+
+Additional testing on The Battle for Wesnoth 1.18
